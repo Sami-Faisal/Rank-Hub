@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PDF Editing | Rank Hub</title>
+  <link rel="stylesheet" href="pdf.css" />
+  <link rel="icon" href="logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a2d9d5f79e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="bg-overlay"></div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <a href="services.html" class="back-btn zoom-btn"><i class="fas fa-arrow-left"></i> Back</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>PDFs That Work Like Magic</h1>
+      <p>Compress, edit, watermark, or split — whatever you want done with your PDF, I’ll make it clean, quick, and pro-level.</p>
+      <a href="contact.html" class="cta-btn zoom-btn">Fix My PDF</a>
+    </div>
+    <div class="hero-right">
+      <img src="pdf.png" alt="PDF Editing" />
+    </div>
+  </section>
+
+  <!-- Sections -->
+  <section class="section section-box">
+    <h2 class="section-title center">Why This Matters</h2>
+    <p class="power">Messy PDFs kill first impressions. I clean them up — so your files look sharp, pro, and perfect every time.</p>
+  </section>
+
+  <section class="section section-box">
+    <h2 class="section-title center">What You Can Get</h2>
+    <p class="power">1 Add or remove content<br>2 Compress files<br>3 Merge or split PDFs<br>4 Add watermark/logo<br>5 Fix formatting<br>6 Fast delivery</p>
+  </section>
+
+  <section class="section section-box">
+    <h2 class="section-title center">Why Choose Me?</h2>
+    <p class="power">No online tool gives perfect results. I do it manually — clean layout, pro formatting, and fast support.</p>
+  </section>
+
+  <!-- What You Get -->
+  <section class="section">
+    <h2 class="section-title center">Here’s What You Actually Get</h2>
+    <div class="cards">
+      <div class="card"><i class="fas fa-file-pen"></i><p><strong>Smart Edits</strong><br>Text/image changes done professionally.</p></div>
+      <div class="card"><i class="fas fa-compress-alt"></i><p><strong>Compression</strong><br>Smaller size, same quality — no loss.</p></div>
+      <div class="card"><i class="fas fa-file-signature"></i><p><strong>Watermarking</strong><br>Brand your PDFs with custom logos/text.</p></div>
+      <div class="card"><i class="fas fa-file-code"></i><p><strong>Clean Formatting</strong><br>Everything aligned, tidy, and pro.</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ (centered, no bg) -->
+  <section class="section">
+    <h2 class="section-title center">Client Questions — Answered Real</h2>
+    <div class="faq-box">
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">Can you remove something from my PDF?</div>
+        <div class="faq-answer">Yes, I can remove or edit any part of your PDF cleanly.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">Will the quality stay the same after compression?</div>
+        <div class="faq-answer">100%. File gets lighter, but quality stays sharp.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">Can you add my logo as watermark?</div>
+        <div class="faq-answer">Yes. Logo, text watermark, anything you want.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">How fast is delivery?</div>
+        <div class="faq-answer">Usually within a few hours max.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <h2 class="section-title center">Let’s Make Your PDFs Look Boss</h2>
+    <p class="power" style="text-align:center;">Clean layout, proper size, pro formatting — all done fast and right.</p>
+    <a href="conact.html" class="cta-btn big zoom-btn">Send Me Your File</a>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const parent = q.parentElement;
+        parent.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
