@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+:root {
+  --bg-dark: #17032e;
+  --gray: #ccc;
+  --light: #f2f2f2;
+  --accent: #00ffae;
+  --font-main: 'Poppins', sans-serif;
+  --box-bg: rgba(15, 17, 21, 0.7);
+  --box-shadow: #00ffae40;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  background-image: linear-gradient(rgba(15, 17, 21, 0.75), rgba(15, 17, 21, 0.75)), url('servicebg.png');
+  background-size: cover;
+  background-position: center;
+  font-family: var(--font-main);
+  color: var(--light);
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Global link reset */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 5%;
+  flex-wrap: wrap;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.logo {
+  width: 80px;
+  cursor: pointer;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  width: 100%;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+/* Intro */
+.intro {
+  text-align: center;
+  margin: 2rem auto 1.5rem;
+  padding: 0 1rem;
+}
+
+.main-tag {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.sub-tag {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.second-tagline {
+  text-align: center;
+  max-width: 900px;
+  margin: 1.5rem auto 2rem;
+  font-size: 1.05rem;
+  color: #aaa;
+  font-weight: 400;
+  padding: 0 1rem;
+  line-height: 1.5;
+}
+
+/* Services Grid - 2 columns on desktop */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 0 5%;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+/* Service Card */
+.service-card {
+  display: flex;
+  flex-direction: row;
+  background: var(--box-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 0 15px var(--box-shadow);
+  transition: all 0.3s ease;
+  align-items: center;
+  overflow: hidden;
+  min-height: 180px;
+}
+
+/* Hover effect */
+.service-card:hover {
+  box-shadow: 0 0 20px #00ffae99;
+  transform: translateY(-5px);
+}
+
+/* Remove link underline */
+.service-card a {
+  text-decoration: none;
+  color: inherit;
+}
+.service-card a:hover {
+  color: var(--accent);
+}
+
+/* Service Image */
+.service-img {
+  width: 180px;
+  height: 100%;
+  object-fit: cover;
+  background: #0c0d10;
+  flex-shrink: 0;
+}
+
+/* Service Content */
+.service-content {
+  padding: 1.5rem 2rem;
+  flex: 1;
+  color: var(--light);
+}
+
+.service-content h3 {
+  color: var(--accent);
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.service-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #aaa;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 0.8rem 0;
+  font-size: 0.85rem;
+  color: #777;
+  background: #0a0d12;
+  border-top: 1px solid #1a1a1a;
+}
+
+/* Responsive: 1 column on tablets/mobiles */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    flex-direction: column;
+  }
+
+  .service-img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .service-content {
+    padding: 1.2rem 1.5rem;
+  }
+}

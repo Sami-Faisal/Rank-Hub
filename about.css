@@ -1,0 +1,168 @@
+/* ==== BACKGROUND ==== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('servicebg.png') center/cover no-repeat fixed;
+  color: #f0f0f0;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.5);
+  z-index: -1;
+  backdrop-filter: blur(5px);
+}
+
+/* ==== NAVIGATION ==== */
+.top-bar {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.logo {
+  width: 55px;
+}
+.navbar {
+  display: flex;
+  gap: 25px;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  position: relative;
+}
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  right: 0;
+  background-color: white;
+  transition: 0.3s ease;
+}
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+/* ==== HERO SECTION ==== */
+.hero-section {
+  padding-top: 100px;
+}
+.hero-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+.hero-text h1 {
+  font-size: 36px;
+  color: #00ffe7;
+  text-shadow: 0 0 6px #00ffe7;
+}
+.hero-text span {
+  color: white;
+  text-shadow: 0 0 4px #00ffe7;
+}
+.hero-tagline {
+  font-size: 18px;
+  margin: 20px 0 30px;
+  color: #ccc;
+}
+.hero-image img {
+  max-width: 360px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.1);
+}
+
+/* ==== EXPLORE BUTTON ==== */
+.explore-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  border: 2px solid #00ffe7;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+.explore-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #00ffe7;
+}
+
+/* ==== MAIN CONTENT BOX ==== */
+.main-content-box {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  border: 1px solid #2a2a2a;
+  box-shadow: 
+    -5px 0 15px rgba(0,255,255,0.08),
+    5px 0 15px rgba(0,255,255,0.08);
+}
+.main-content-box h2 {
+  font-size: 28px;
+  color: #00ffe7;
+  text-shadow: 0 0 4px #00ffe7;
+  margin-top: 30px;
+}
+.main-content-box p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-top: 15px;
+  color: #e6e6e6;
+}
+
+/* ==== FOOTER ==== */
+.footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ==== RESPONSIVE ==== */
+@media screen and (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image img {
+    margin-top: 30px;
+  }
+  .main-content-box {
+    padding: 25px 20px;
+  }
+}
