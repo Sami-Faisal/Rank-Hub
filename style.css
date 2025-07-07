@@ -126,7 +126,8 @@ header {
   transition: width 0.3s;
 }
 
-.main-nav a:hover::after {
+.main-nav a:hover::after,
+.main-nav a.active::after {
   width: 100%;
 }
 
