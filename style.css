@@ -91,6 +91,17 @@ header {
   flex-direction: column;
   gap: 0.8rem;
   z-index: 999;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .social-icons {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    flex-direction: column;
+  }
 }
 
 .social-icons a {
@@ -393,4 +404,5 @@ footer a:hover {
     position: absolute;
   }
 }
+
 
