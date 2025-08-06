@@ -36,6 +36,7 @@ body {
   opacity: 1;
 }
 
+
 @keyframes bgFloat {
   0% { background-position: center top; }
   100% { background-position: center bottom; }
@@ -364,4 +365,5 @@ footer a:hover {
     left: 20px;
   }
 }
+
 
