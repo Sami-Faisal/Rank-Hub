@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: 80px;
+}
+
 body {
   font-family: var(--font-main);
   background-color: var(--bg-dark);
@@ -94,16 +98,6 @@ header {
   pointer-events: auto;
 }
 
-@media (max-width: 768px) {
-  .social-icons {
-    position: fixed;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    flex-direction: column;
-  }
-}
-
 .social-icons a {
   color: gray;
   font-size: 1.6rem;
@@ -154,19 +148,27 @@ header {
 }
 
 /* About Me */
-#about-me {
+#about-me,
+.alt-bg,
+#purpose {
   background-color: #1c1c1c;
   padding: 4rem 2rem;
   text-align: center;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-#about-me h2 {
+#about-me h2,
+.alt-bg h2,
+#purpose h2 {
   color: var(--accent);
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-#about-me p {
+#about-me p,
+.alt-bg p,
+#purpose p {
   color: #bbb;
   font-size: 1.1rem;
   line-height: 1.6;
@@ -208,54 +210,13 @@ header {
   text-decoration: none;
   border-radius: 8px;
   transition: 0.3s ease;
+  white-space: nowrap;
 }
 
 .btn-explore:hover {
   box-shadow: 0 0 12px var(--accent);
   transform: scale(1.05);
   color: var(--accent);
-}
-
-/* About Rank Hub */
-.alt-bg {
-  background-color: #1a1f24;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.alt-bg h2 {
-  color: var(--accent);
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.alt-bg p {
-  color: #bbb;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  max-width: 700px;
-  margin-inline: auto;
-}
-
-/* Purpose Section */
-#purpose {
-  text-align: center;
-  padding: 5rem 2rem;
-  background-color: #15171c;
-}
-
-#purpose h2 {
-  font-size: 2rem;
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-
-#purpose p {
-  max-width: 800px;
-  margin: auto;
-  line-height: 1.8;
-  color: #aaa;
-  font-size: 1.1rem;
 }
 
 /* Footer */
@@ -276,7 +237,7 @@ footer a:hover {
   color: #fff;
 }
 
-/* Responsive: Laptop */
+/* Laptop Responsive */
 @media (max-width: 1024px) {
   header {
     padding: 2rem 3%;
@@ -291,6 +252,7 @@ footer a:hover {
   .right .profile-pic {
     height: 80vh;
     max-width: 100%;
+    object-fit: contain;
   }
 
   .main-nav {
@@ -304,11 +266,10 @@ footer a:hover {
   .logo {
     top: 20px;
     left: 20px;
-    position: absolute;
   }
 }
 
-/* Responsive: Tablet */
+/* Tablet Responsive */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -319,7 +280,6 @@ footer a:hover {
   .logo {
     top: 20px;
     left: 20px;
-    position: absolute;
   }
 
   .left {
@@ -341,6 +301,7 @@ footer a:hover {
     height: auto;
     width: 100%;
     max-width: 350px;
+    object-fit: contain;
   }
 
   .main-nav {
@@ -361,7 +322,7 @@ footer a:hover {
   }
 }
 
-/* Responsive: Mobile */
+/* Mobile Responsive */
 @media (max-width: 480px) {
   .left h1 {
     font-size: 2rem;
@@ -401,8 +362,6 @@ footer a:hover {
   .logo {
     top: 20px;
     left: 20px;
-    position: absolute;
   }
 }
-
 
