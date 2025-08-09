@@ -1,7 +1,5 @@
-/* Poppins loaded via <link> in HTML head */
-
 :root {
-  --bg-dark: #030e24;
+  --bg-dark: #1a1d2a; /* little dark */
   --light: #f2f2f2;
   --accent: #00ffae;
   --glass: rgba(17, 20, 26, 0.82);
@@ -12,46 +10,74 @@
   --footer-gray: #9aa0a6;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+}
 
-/* Make page a column so footer can stick to bottom */
 body {
   background-color: var(--bg-dark);
   color: var(--light);
   font-family: var(--font-main);
   min-height: 100vh;
   position: relative;
-
   display: flex;
   flex-direction: column;
 }
 
-/* Background image */
+/* Background with blur and dark overlay */
 .bg-overlay {
-  background: url('servicebg.png') no-repeat center/cover;
-  opacity: 0.12;
   position: fixed;
   inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('servicebg.png') no-repeat center center/cover;
+  filter: blur(6px);
+  z-index: -2;
+}
+
+.bg-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(26, 29, 42, 0.4); /* subtle dark */
   z-index: -1;
 }
 
 /* Navigation */
 .main-nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1.2rem 5%;
+  align-items: center;
+  padding: 1.5rem 5%;
   font-weight: 600;
 }
 
-.logo { width: 70px; aspect-ratio: 1 / 1; object-fit: contain; }
+/* Logo */
+.logo {
+  width: 70px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
 
+/* Nav links horizontally on desktop */
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: clamp(1rem, 2.5vw, 2rem);
+  gap: 25px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .main-nav a {
@@ -59,7 +85,9 @@ body {
   text-decoration: none;
   position: relative;
   font-weight: 600;
+  font-size: 1.1rem;
   transition: color 0.3s ease;
+  padding: 6px 0;
 }
 
 .main-nav a::after {
@@ -74,9 +102,47 @@ body {
 }
 
 .main-nav a:hover::after,
-.main-nav a.active::after { width: 100%; }
+.main-nav a.active::after {
+  width: 100%;
+}
 
-.main-nav a:hover { color: var(--accent); }
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+/* Mobile and tablet: keep logo top-left, nav horizontal centered below */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start; /* logo top-left */
+    gap: 10px;
+  }
+  .logo {
+    width: 60px;
+    margin: 0; /* no centering */
+  }
+  .main-nav ul {
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .main-nav a {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .logo {
+    width: 50px;
+  }
+  .main-nav a {
+    font-size: 1rem;
+  }
+}
 
 /* Taglines */
 .intro {
@@ -99,7 +165,9 @@ body {
 }
 
 /* Wrapper to keep content above footer */
-.blog-wrap { padding-bottom: 2rem; }
+.blog-wrap {
+  padding-bottom: 2rem;
+}
 
 /* Blog grid — 2 per row; center if single */
 .blog-grid {
@@ -108,6 +176,36 @@ body {
   gap: 2rem;
   padding: 2rem 5%;
   justify-content: center;
+}
+
+/* On tablets, switch to 1 column */
+@media (max-width: 760px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+  .blog-box {
+    max-width: 520px;
+    margin-inline: auto;
+  }
+  .blog-content {
+    padding: 0.9rem;
+  }
+}
+
+/* On small phones, reduce padding and max-width */
+@media (max-width: 480px) {
+  .blog-grid {
+    padding: 1.5rem 3%;
+  }
+  .blog-box {
+    max-width: 100%;
+    margin-inline: 0;
+    border-radius: 12px;
+  }
+  .blog-content {
+    padding: 0.75rem;
+  }
 }
 
 /* Card */
@@ -132,7 +230,7 @@ body {
 /* Square image on top */
 .img-wrap {
   width: 100%;
-  aspect-ratio: 1 / 1;           /* perfect square area */
+  aspect-ratio: 1 / 1;
   overflow: hidden;
 }
 
@@ -143,7 +241,7 @@ body {
   display: block;
 }
 
-/* Content with relaxed spacing (not too tight) */
+/* Content with relaxed spacing */
 .blog-content {
   padding: 1rem;
 }
@@ -156,7 +254,7 @@ body {
   line-height: 1.35;
 }
 
-/* Neat paragraph: readable, trimmed to 3 lines, not cramped */
+/* Neat paragraph */
 .blog-content p {
   font-size: 0.95rem;
   color: #d6d6d6;
@@ -164,14 +262,14 @@ body {
   letter-spacing: 0.1px;
 
   display: -webkit-box;
-  -webkit-line-clamp: 3;         /* clamp to 3 lines */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-/* Footer: bottom + centered + gray */
+/* Footer */
 footer {
-  margin-top: auto;              /* pushes footer to the bottom */
+  margin-top: auto;
   text-align: center;
   padding: 0.9rem 0;
   font-size: 0.88rem;
@@ -180,17 +278,6 @@ footer {
   border-top: 1px solid #1a1a1a;
 }
 
-footer p { color: inherit; }
-
-/* Responsive */
-@media (max-width: 760px) {
-  .blog-grid {
-    grid-template-columns: 1fr;
-    gap: 1.4rem;
-  }
-  .blog-box {
-    max-width: 520px;
-    margin-inline: auto;
-  }
-  .blog-content { padding: 0.9rem; }
+footer p {
+  color: inherit;
 }
