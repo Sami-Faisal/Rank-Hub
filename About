@@ -20,11 +20,11 @@
   <header class="main-nav">
     <img src="logo.png" class="logo" alt="Rank Hub" />
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="conact.html">Contact</a></li>
+      <li><a href="Home">Home</a></li>
+      <li><a href="Services">Services</a></li>
+      <li><a href="About"class="active">About</a></li>
+      <li><a href="Blog">Blog</a></li>
+      <li><a href="Conatct">Contact</a></li>
     </ul>
   </header>
 
@@ -73,5 +73,6 @@
 
 </body>
 </html>
+
 
 
