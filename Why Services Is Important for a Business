@@ -18,7 +18,7 @@
 
   <header>
     <img src="logo.png" alt="Rank Hub Logo" class="logo" />
-    <button onclick="location.href='blog.html'" class="back-btn">Back</button>
+    <button onclick="location.href='Blog'" class="back-btn">Back</button>
   </header>
 
   <div class="tagline">
@@ -133,3 +133,4 @@
   </script>
 </body>
 </html>
+
