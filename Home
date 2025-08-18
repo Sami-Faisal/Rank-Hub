@@ -39,11 +39,11 @@
 
   <!-- Nav -->
   <nav class="main-nav fade-in" style="animation-delay: 0.7s;">
-    <li><a href="index.html" class="active">Home</a></li>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="blog.html">Blog</a>
-    <a href="conact.html">Contact</a>
+    <li><a href="Home" class="active">Home</a></li>
+    <a href="Services">Services</a>
+    <a href="About">About</a>
+    <a href="Blog">Blog</a>
+    <a href="Contact">Contact</a>
   </nav>
 
   <!-- About Section -->
@@ -56,7 +56,7 @@
       <div class="skill-box">Tool Reselling</div>
       <div class="skill-box">Canva Design</div>
     </div>
-    <a href="services.html" class="btn-explore">Explore My Services</a>
+    <a href="Services" class="btn-explore">Explore My Services</a>
   </section>
 
   <!-- About Rank Hub -->
@@ -79,3 +79,4 @@
 
 </body>
 </html>
+
