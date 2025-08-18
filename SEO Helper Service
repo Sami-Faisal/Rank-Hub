@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>SEO Helper Services | Technical SEO, On-Page Optimization & Site Audits – Rank Hub</title>
+  <title>SEO Helper Service | Technical SEO, On-Page Optimization & Site Audits – Rank Hub</title>
   <meta name="description" content="Rank Hub offers professional SEO Helper services — technical SEO audits, on-page optimization, speed fixes, and strategies to boost your Google rankings fast.">
   <meta name="keywords" content="SEO helper services, technical SEO audits, on-page optimization, SEO fixes, site speed improvement, Rank Hub SEO">
   <link rel="stylesheet" href="seo.css" />
@@ -18,7 +18,7 @@
   <!-- Header -->
   <header class="main-header">
     <img src="logo.png" alt="Rank Hub Logo" class="logo" />
-    <a href="services.html" class="back-btn zoom-btn"><i class="fas fa-arrow-left"></i> Back to Services</a>
+    <a href="Services" class="back-btn zoom-btn"><i class="fas fa-arrow-left"></i> Back to Services</a>
   </header>
 
   <!-- Hero -->
@@ -106,3 +106,4 @@
 
 </body>
 </html>
+
