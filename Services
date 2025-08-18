@@ -24,11 +24,11 @@
   <nav class="main-nav">
     <img src="logo.png" alt="Rank Hub Logo" class="logo" />
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html" class="active">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="conact.html">Contact</a></li>
+      <li><a href="Home">Home</a></li>
+      <li><a href="Services" class="active">Services</a></li>
+      <li><a href="About">About</a></li>
+      <li><a href="Blog">Blog</a></li>
+      <li><a href="Contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -49,7 +49,7 @@
       </div>
     </a>
 
-    <a href="seo.html" class="service-card">
+    <a href="SEO Helper Service" class="service-card">
       <img src="seohelper.png" alt="SEO Helper Service" class="service-img" />
       <div class="service-content">
         <h2>SEO Helper</h2>
@@ -57,7 +57,7 @@
       </div>
     </a>
 
-    <a href="content.html" class="service-card">
+    <a href="Content Writing Service" class="service-card">
       <img src="content.png" alt="Content Writing Service" class="service-img" />
       <div class="service-content">
         <h2>Content Writing</h2>
@@ -65,7 +65,7 @@
       </div>
     </a>
 
-    <a href="canva.html" class="service-card">
+    <a href="Canva Design Service" class="service-card">
       <img src="canva.png" alt="Canva Design Service" class="service-img" />
       <div class="service-content">
         <h2>Canva Design</h2>
@@ -73,7 +73,7 @@
       </div>
     </a>
 
-    <a href="portfolio.html" class="service-card">
+    <a href="Portfolio Design" class="service-card">
       <img src="portfolio.png" alt="Portfolio Maker Service" class="service-img" />
       <div class="service-content">
         <h2>Portfolio Maker</h2>
@@ -81,7 +81,7 @@
       </div>
     </a>
 
-    <a href="profile.html" class="service-card">
+    <a href="Profile Setup" class="service-card">
       <img src="profilesetup.png" alt="Profile Setup Service" class="service-img" />
       <div class="service-content">
         <h2>Profile Setup</h2>
@@ -89,7 +89,7 @@
       </div>
     </a>
 
-    <a href="editing.html" class="service-card">
+    <a href="Editing Service" class="service-card">
       <img src="editing.png" alt="Editing Services" class="service-img" />
       <div class="service-content">
         <h2>All Type of Editing</h2>
@@ -97,7 +97,7 @@
       </div>
     </a>
 
-    <a href="tools.html" class="service-card">
+    <a href="Resell Seo Tools" class="service-card">
       <img src="tools.png" alt="Tool Reselling Service" class="service-img" />
       <div class="service-content">
         <h2>Tool Reselling</h2>
@@ -105,7 +105,7 @@
       </div>
     </a>
 
-    <a href="pdf.html" class="service-card">
+    <a href="PDF Editing Service" class="service-card">
       <img src="pdf.png" alt="PDF Tools Service" class="service-img" />
       <div class="service-content">
         <h2>PDF Tools</h2>
@@ -113,7 +113,7 @@
       </div>
     </a>
 
-    <a href="sheets.html" class="service-card">
+    <a href="Sheets" class="service-card">
       <img src="sheets.png" alt="Google Sheets Service" class="service-img" />
       <div class="service-content">
         <h2>Google Sheets</h2>
@@ -121,7 +121,7 @@
       </div>
     </a>
 
-    <a href="web.html" class="service-card">
+    <a href="Web Design" class="service-card">
       <img src="basicweb.png" alt="Basic Web & Animation Service" class="service-img" />
       <div class="service-content">
         <h2>Basic Web & Animation</h2>
@@ -129,7 +129,7 @@
       </div>
     </a>
 
-    <a href="task.html" class="service-card">
+    <a href="Micro Task" class="service-card">
       <img src="microtasks.png" alt="Micro Tasks Service" class="service-img" />
       <div class="service-content">
         <h2>Micro Tasks</h2>
@@ -146,4 +146,5 @@
 
 </body>
 </html>
+
 
