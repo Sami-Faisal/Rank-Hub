@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Rank Hub</title>
+  <title>Contact ∣ Rank Hub</title>
   <link rel="stylesheet" href="contact.css" />
   <link rel="icon" type="image/png" href="logo.png" />
   <script src="https://kit.fontawesome.com/23e2b1a3aa.js" crossorigin="anonymous"></script>
@@ -24,11 +24,11 @@
   <nav class="main-nav">
     <img src="logo.png" alt="Rank Hub Logo" class="logo" />
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a class="active" href="conact.html">Contact</a></li>
+      <li><a href="Home">Home</a></li>
+      <li><a href="Services">Services</a></li>
+      <li><a href="About">About</a></li>
+      <li><a href="Blog">Blog</a></li>
+      <li><a class="active" href="Contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -74,3 +74,4 @@
   </footer>
 </body>
 </html>
+
