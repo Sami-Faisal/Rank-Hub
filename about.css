@@ -37,9 +37,7 @@ body {
 
 /* NAVBAR */
 .main-nav {
-  position: fixed;
-  top: 0; 
-  left: 0;
+  position: relative;   /* ✅ changed from fixed */
   width: 100%;
   padding: 20px 40px;
   display: flex;
@@ -249,3 +247,4 @@ body {
     font-size: 14px;
   }
 }
+
