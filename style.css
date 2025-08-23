@@ -1,4 +1,3 @@
- bro this is css add cta button style ok 
 :root {
   --bg-dark: #0f1115;
   --light: #f2f2f2;
@@ -66,7 +65,7 @@ header {
 
 .left h1 {
   font-size: 3.2rem;
-  color: var(--accent);
+  color: #fff; /* changed */
 }
 
 .tagline {
@@ -120,7 +119,7 @@ header {
   margin-top: -3rem;
   margin-bottom: 3rem;
   flex-wrap: wrap;
-  list-style: none; /* no bullets if <ul> */
+  list-style: none;
   padding-left: 0;
 }
 
@@ -132,9 +131,9 @@ header {
   font-size: 1.1rem;
   padding: 0.5rem;
   display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Underline animation from center */
 .main-nav a::after {
   content: '';
   position: absolute;
@@ -150,6 +149,11 @@ header {
   display: block;
 }
 
+.main-nav a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 .main-nav a:hover::after,
 .main-nav a.active::after {
   transform: scaleX(1);
@@ -163,7 +167,7 @@ header {
 }
 
 #about-me h2 {
-  color: var(--accent);
+  color: #fff; /* changed */
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -226,7 +230,7 @@ header {
 }
 
 .alt-bg h2 {
-  color: var(--accent);
+  color: #fff; /* changed */
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -248,7 +252,7 @@ header {
 
 #purpose h2 {
   font-size: 2rem;
-  color: var(--accent);
+  color: #fff; /* changed */
   margin-bottom: 1rem;
 }
 
@@ -422,7 +426,7 @@ footer a:hover {
     max-width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    list-style: none; /* remove bullets */
+    list-style: none;
     padding-left: 0;
   }
 
