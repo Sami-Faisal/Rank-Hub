@@ -65,7 +65,7 @@ header {
 
 .left h1 {
   font-size: 3.2rem;
-  color: #fff; /* changed */
+  color: #fff;
 }
 
 .tagline {
@@ -93,9 +93,6 @@ header {
   flex-direction: column;
   gap: 0.8rem;
   z-index: 999;
-  background: none !important;
-  padding: 0;
-  border-radius: 0;
 }
 
 .social-icons a {
@@ -167,7 +164,7 @@ header {
 }
 
 #about-me h2 {
-  color: #fff; /* changed */
+  color: #fff;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -230,7 +227,7 @@ header {
 }
 
 .alt-bg h2 {
-  color: #fff; /* changed */
+  color: #fff;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -252,7 +249,7 @@ header {
 
 #purpose h2 {
   font-size: 2rem;
-  color: #fff; /* changed */
+  color: #fff;
   margin-bottom: 1rem;
 }
 
@@ -418,34 +415,39 @@ footer a:hover {
     margin-bottom: 0;
   }
 
+  /* FIXED NAV - one line, finger scroll, no scrollbar */
   .main-nav {
-    margin: 1rem auto 2rem;
-    justify-content: center;
+    display: flex;
     flex-wrap: nowrap;
-    gap: 0.8rem;
-    max-width: 100%;
+    justify-content: flex-start;
+    gap: 0.6rem;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;     
+    -ms-overflow-style: none;  
+    margin: 1rem 0 1.5rem;
+    padding: 0 0.5rem;
     list-style: none;
-    padding-left: 0;
+  }
+  .main-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .main-nav a {
+    font-size: 0.9rem;
+    font-weight: 600;
     color: #fff;
-    font-weight: 700;
-    font-size: 0.95rem;
+    padding: 0.3rem 0.6rem;
     white-space: nowrap;
-    text-decoration: none;
-    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
     flex-shrink: 0;
-    position: relative;
-    display: inline-block;
+    transition: 0.3s;
   }
 
   .main-nav a:hover,
   .main-nav a.active {
     color: var(--accent);
-    padding-bottom: 0.2rem;
+    background: rgba(0,255,174,0.08);
   }
 
   .social-icons {
@@ -456,9 +458,6 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background: none !important;
-    padding: 0;
-    border-radius: 0;
     z-index: 9999;
   }
   .social-icons a {
@@ -479,7 +478,6 @@ footer a:hover {
   .btn-explore {
     font-size: 0.9rem;
     padding: 0.6rem 1.2rem;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
   .btn-explore:hover {
     box-shadow: 0 0 14px var(--accent);
