@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Project Management Services | Rank Hub</title>
+  <link rel="stylesheet" href="page.css" />
+  <link rel="icon" href="logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional project management services for businesses and teams. From planning and execution to delivery, we handle everything to keep your projects on track.">
+  <meta name="keywords" content="project management, task management, team collaboration, agile, project planning, business support, Rank Hub">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a2d9d5f79e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="bg-overlay"></div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <a href="services.html" class="back-btn zoom-btn"><i class="fas fa-arrow-left"></i> Back</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Project Management Services</h1>
+      <p>I organize, plan, and manage projects to ensure smooth execution and on-time delivery. From team coordination to deadlines — I keep everything in control.</p>
+      <a href="contact.html" class="cta-btn zoom-btn">Get Managed Today</a>
+    </div>
+    <div class="hero-right">
+      <img src="project.png" alt="Project Management Services" />
+    </div>
+  </section>
+
+  <!-- Why It Matters -->
+  <section class="section section-box">
+    <h2 class="section-title center">Why Project Management Matters</h2>
+    <p class="power">Without proper management, projects miss deadlines, teams lose focus, and businesses lose money. A skilled project manager ensures goals are met effectively.</p>
+  </section>
+
+  <!-- Who Needs This -->
+  <section class="section section-box">
+    <h2 class="section-title center">Who Needs Project Management?</h2>
+    <p class="power">Startups, agencies, freelancers, and companies working on multiple projects. If you need clarity, deadlines, and accountability — you need project management.</p>
+  </section>
+
+  <!-- Services Offered -->
+  <section class="section section-box">
+    <h2 class="section-title center">What I Can Do For You</h2>
+    <div class="cards">
+      <div class="card"><i class="fas fa-clipboard-list"></i><p><strong>Planning & Strategy</strong><br>Define scope, set goals, and build roadmaps.</p></div>
+      <div class="card"><i class="fas fa-users"></i><p><strong>Team Coordination</strong><br>Assign tasks, track progress, and maintain communication.</p></div>
+      <div class="card"><i class="fas fa-tasks"></i><p><strong>Task Management</strong><br>Organize workflows and keep tasks on schedule.</p></div>
+      <div class="card"><i class="fas fa-clock"></i><p><strong>Deadline Tracking</strong><br>Ensure timely delivery without stress.</p></div>
+      <div class="card"><i class="fas fa-chart-line"></i><p><strong>Performance Reporting</strong><br>Track KPIs and provide updates for better decision-making.</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <h2 class="section-title center">Common Questions</h2>
+    <div class="faq-box">
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">Do you handle remote teams?</div>
+        <div class="faq-answer">Yes, I manage remote and hybrid teams with modern tools like Trello, Asana, and Slack.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">What project sizes do you manage?</div>
+        <div class="faq-answer">From small freelance projects to multi-team business tasks, I handle all scales.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">Can you work with Agile or Scrum?</div>
+        <div class="faq-answer">Yes, I adapt to Agile, Scrum, or custom workflows as required.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">Do you provide progress reports?</div>
+        <div class="faq-answer">Yes, I deliver regular progress reports and performance updates.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">Can you manage multiple projects?</div>
+        <div class="faq-answer">Definitely, I specialize in multitasking and managing multiple projects at once.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <h2 class="section-title center">Let’s Get Your Projects Done Right</h2>
+    <p class="power" style="text-align:center;">Smooth management, strong communication, and successful delivery. Hire me to manage your projects efficiently.</p>
+    <a href="contact.html" class="cta-btn big zoom-btn">Hire My Project Management Service</a>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        q.parentElement.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

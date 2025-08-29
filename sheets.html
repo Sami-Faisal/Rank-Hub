@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Google Sheets | Rank Hub</title>
+  <link rel="stylesheet" href="page.css" />
+  <link rel="icon" href="logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a2d9d5f79e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- BG Overlay -->
+  <div class="bg-overlay"></div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <a href="services.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Smart Sheets. Smarter You.</h1>
+      <p>Custom calculators and smart automations designed to save you hours and keep your data flawless.</p>
+      <a href="contact.html" class="cta-btn">Start Now</a>
+    </div>
+    <div class="hero-right">
+      <img src="d.png" alt="Google Sheets" />
+    </div>
+  </section>
+
+  <!-- Why Section -->
+  <section class="section section-box">
+    <h2 class="section-title center">Why You Need Smart Sheets</h2>
+    <p class="power">Manual sheets waste time and kill focus. We automate your flow — fast, clean, and optimized for results.</p>
+  </section>
+
+  <!-- What You Get -->
+  <section class="section">
+    <h2 class="section-title center">What You Can Get</h2>
+    <div class="cards">
+      <div class="card"><i class="fas fa-check-circle"></i><p><strong>Custom Calculators</strong><br>Designed for your needs. Clean. Fast. Accurate.</p></div>
+      <div class="card"><i class="fas fa-check-circle"></i><p><strong>Smart Automations</strong><br>Auto-fill, auto-update, no manual work again.</p></div>
+      <div class="card"><i class="fas fa-check-circle"></i><p><strong>Time Saving Setups</strong><br>Formulas + logic that save hours daily.</p></div>
+      <div class="card"><i class="fas fa-check-circle"></i><p><strong>Data Protection</strong><br>Locked cells, smart access — fully secure.</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ (centered, no bg) -->
+  <section class="section">
+    <h2 class="section-title center">FAQs</h2>
+    <div class="faq-box">
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">Can you build complex calculators?</div>
+        <div class="faq-answer">Yes. Formulas, logic, automation — all included.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">Is it mobile-friendly?</div>
+        <div class="faq-answer">Yes, it works perfectly on phones and tablets.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">How fast is delivery?</div>
+        <div class="faq-answer">Mostly 1–2 days depending on the complexity.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <h2 class="section-title center">Want Pro-Level Sheets?</h2>
+    <p class="power" style="text-align:center;">Let’s stop wasting time on manual tasks. Get sheets that work smart — just like you.</p>
+    <a href="contact.html" class="cta-btn big">Let’s Talk</a>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const parent = q.parentElement;
+        parent.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
