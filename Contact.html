@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact ∣ Rank Hub</title>
+  <title>Contact - Rank Hub</title>
   <link rel="stylesheet" href="contact.css" />
   <link rel="icon" type="image/png" href="logo.png" />
   <script src="https://kit.fontawesome.com/23e2b1a3aa.js" crossorigin="anonymous"></script>
@@ -23,7 +23,15 @@
   <!-- Navigation -->
   <nav class="main-nav">
     <img src="logo.png" alt="Rank Hub Logo" class="logo" />
-    <ul>
+    
+    <!-- Hamburger button -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul id="nav-links">
       <li><a href="Home">Home</a></li>
       <li><a href="Services">Services</a></li>
       <li><a href="About">About</a></li>
@@ -72,6 +80,15 @@
   <footer class="footer">
     © 2025 Rank Hub. Built by Sami Faisal
   </footer>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+      hamburger.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
-
