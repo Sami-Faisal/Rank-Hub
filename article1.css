@@ -1,67 +1,122 @@
-/* ---------- Global Styles ---------- */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #111;
-  color: white;
-  position: relative;
-  z-index: 1;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+:root {
+  --bg-dark: #0f1115;
+  --light: #fff;
+  --accent: #00ffae;
+  --font-main: 'Poppins', sans-serif;
+  --glass: rgba(255,255,255,0.08);
+  --glass-border: rgba(255,255,255,0.2);
 }
 
-/* ---------- Background Blur Overlay ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-dark);
+  color: var(--light);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .bg-blur::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url('servicebg.png') center/cover no-repeat;
-  filter: blur(8px) brightness(0.3);
+  background: 
+    linear-gradient(135deg, rgba(0,255,174,0.1), rgba(0,255,174,0.05)), /* soft neon gradient overlay */
+    url('servicebg.png') center/cover no-repeat;
+  backdrop-filter: blur(15px);  /* glassy effect */
   z-index: -1;
+  animation: bgShift 30s linear infinite;
 }
 
-/* ---------- Header ---------- */
-header {
+/* subtle background movement animation */
+@keyframes bgShift {
+  0% { transform: scale(1) translate(0,0); }
+  50% { transform: scale(1.05) translate(10px,10px); }
+  100% { transform: scale(1) translate(0,0); }
+}
+
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;          /* full width */
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 25px;
+  padding: 0 25px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border-bottom-left-radius: 20px;   /* rounded corners only at bottom */
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 8px 25px rgba(0,255,174,0.35); /* 3D depth */
+  z-index: 999;
 }
 
-.logo {
-  width: 70px;
+
+
+/* Logo + Text */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-/* ---------- Back Button (Redesigned) ---------- */
-.back-btn {
-  font-size: 18px;
-  color: #fff;
+.logo-container .logo {
+  width: 65px;
+}
+
+.logo-container .logo-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--light);
+  letter-spacing: 0.5px;
+}
+
+/* Back Button - 3D Glassy */
+.top-bar .back-btn {
+  font-size: 16px;
+  color: var(--light);
   font-weight: 600;
-  background: rgba(51, 51, 51, 0.5); /* Semi-transparent for blur */
+  background: rgba(255,255,255,0.1);
   padding: 10px 20px;
-  border-radius: 12px;
-  text-decoration: none;
-  backdrop-filter: blur(8px); /* Blurry glass effect */
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
-  box-shadow:
-    0 0 6px rgba(0, 255, 255, 0.2),
-    0 0 20px rgba(0, 255, 255, 0.08); /* Side glow */
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 4px 12px rgba(0,255,174,0.3);
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.back-btn:hover {
-  background: rgba(68, 68, 68, 0.6);
+.top-bar .back-btn:hover {
+  background: rgba(255,255,255,0.15);
   transform: scale(1.05);
-  color: #ffa64d;
-  box-shadow:
-    0 0 8px rgba(255, 165, 0, 0.6),
-    0 0 25px rgba(255, 165, 0, 0.3); /* Orange glow on hover */
-  border: 1px solid rgba(255, 165, 0, 0.4);
+  color: var(--accent);
+  box-shadow: 0 6px 18px var(--accent);
+  border: 1px solid var(--accent);
 }
 
+/* Push content below top bar */
+.content {
+  margin-top: 100px;
+}
 
-
-/* ---------- Tagline ---------- */
+/* Tagline */
 .tagline {
   text-align: center;
   font-size: 28px;
@@ -70,63 +125,66 @@ header {
   margin: 30px auto;
   padding: 0 20px;
   line-height: 1.5;
-  color: #fff;
+  color: var(--light);
   text-shadow: 0 0 10px rgba(255,255,255,0.2);
-  word-break: break-word;
-  white-space: normal;
 }
 
-/* ---------- Blog Box ---------- */
+/* Blog Box */
 .blog-box {
-  max-width: 900px;
-  margin: auto;
-  background: rgba(255, 255, 255, 0.07); /* stronger blur */
-  backdrop-filter: blur(10px); /* about 70% blur */
-  border: 2px solid #333; /* dark gray border */
+  max-width: 1100px;
+  margin: 2rem auto;
+  background: var(--glass);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
   border-radius: 20px;
-  padding: 30px;
-  box-shadow:
-    0 0 25px rgba(255, 255, 255, 0.07),
-    inset 10px 0 20px rgba(255, 255, 255, 0.05),
-    inset -10px 0 20px rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  color: var(--light);
 }
 
-/* ---------- Blog Image ---------- */
+/* Blog Image */
 .img-box img {
   width: 100%;
   border-radius: 15px;
   margin-bottom: 20px;
-  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+  box-shadow: 0 0 15px rgba(0,255,174,0.3);
 }
 
-/* ---------- Headings ---------- */
+/* Headings */
 h1, h2 {
   margin-top: 30px;
+  color: var(--light);
 }
 h2 {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--accent);
   padding-bottom: 5px;
 }
 
-/* ---------- Table ---------- */
+/* Paragraphs */
+p {
+  line-height: 1.6;
+  margin: 15px 0;
+  color: var(--light);
+}
+
+/* Table */
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
-  border: 1px solid white;
+  border: 1px solid var(--light);
 }
 th, td {
   padding: 12px;
-  border: 1px solid white;
+  border: 1px solid var(--light);
   text-align: center;
 }
 
-/* ---------- FAQ Section ---------- */
+/* FAQ Section */
 .faqs {
   margin-top: 40px;
 }
 .faq {
-  border: 1px solid white;
+  border: 1px solid var(--light);
   padding: 10px 15px;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -134,7 +192,7 @@ th, td {
   transition: 0.3s;
 }
 .faq:hover {
-  box-shadow: 0 0 10px white;
+  box-shadow: 0 0 10px var(--accent);
 }
 .faq-answer {
   display: none;
@@ -149,12 +207,60 @@ th, td {
   to {opacity: 1; transform: translateY(0);}
 }
 
-/* ---------- Footer ---------- */
+/* Footer */
 footer {
-  background: #222;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(15px);
+  color: var(--light);
+  padding: 1.5rem 5%;
   text-align: center;
-  padding: 15px;
-  margin-top: 50px;
-  font-size: 14px;
+  border-radius: 15px 15px 0 0;
+  margin-top: auto;
 }
 
+/* Responsive: Laptop */
+@media (max-width: 1024px) {
+  .blog-box { padding: 30px; max-width: 900px; }
+  .tagline { font-size: 24px; }
+  .logo-container .logo-text { font-size: 24px; }
+}
+
+/* Responsive: Tablet */
+@media (max-width: 768px) {
+  .blog-box { padding: 25px; max-width: 700px; }
+  .tagline { font-size: 20px; }
+  h2 { font-size: 1.5rem; }
+  .logo-container .logo-text { font-size: 20px; }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 480px) {
+  .top-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    padding: 10px 15px;
+  }
+
+  .logo-container {
+    gap: 5px;
+  }
+
+  .logo-container .logo {
+    width: 50px; /* smaller on mobile */
+  }
+
+  .logo-container .logo-text {
+    font-size: 18px; /* smaller on mobile */
+  }
+
+  .top-bar .back-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .blog-box { padding: 20px; max-width: 95%; }
+  .tagline { font-size: 18px; }
+  h2 { font-size: 1.3rem; }
+}
