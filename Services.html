@@ -15,24 +15,31 @@
 <body>
 
   <!-- Background -->
-  <div class="bg-overlay"></div>
+  <div class="bg-overlay" aria-hidden="true"></div>
 
-  <!-- Navbar -->
-  <nav class="main-nav">
-    <img src="logo.png" alt="Rank Hub Logo" class="logo" />
+  <!-- NAVBAR -->
+  <header class="main-nav">
+    <div class="brand">
+      <a href="index" class="logo-link">
+        <img src="logo.png" class="logo" alt="Rank Hub">
+      </a>
+      <span class="brand-name">Rank Hub</span>
+    </div>
+
     <div class="hamburger" id="hamburger">
       <span></span>
       <span></span>
       <span></span>
     </div>
+
     <ul id="nav-links">
       <li><a href="Home">Home</a></li>
-      <li><a href="Services" class="active">Services</a></li>
+      <li><a href="Services" class="active">Servics</a></li>
       <li><a href="About">About</a></li>
       <li><a href="Blog">Blog</a></li>
       <li><a href="Contact">Contact</a></li>
     </ul>
-  </nav>
+  </header>
 
   <!-- Intro Section -->
   <section class="intro">
@@ -70,7 +77,7 @@
     </a>
 
     <!-- Graphic Design -->
-    <a href="Design" class="service-card" aria-label="Graphic Design Service">
+    <a href="design" class="service-card" aria-label="Graphic Design Service">
       <img src="design.png" alt="Graphic Design" class="service-img" />
       <div class="service-content">
         <h3>Graphic Design</h3>
@@ -97,7 +104,7 @@
     </a>
 
     <!-- Video & Audio Editing -->
-    <a href="Editing" class="service-card" aria-label="Video & Audio Editing Service">
+    <a href="editing" class="service-card" aria-label="Video & Audio Editing Service">
       <img src="editing.png" alt="Video & Audio Editing" class="service-img" />
       <div class="service-content">
         <h3>Video & Audio Editing</h3>
@@ -171,7 +178,7 @@
       </div>
 
       <div class="footer-links">
-        <a href="Contact" target="_blank">Contact Us</a>
+        <a href="https://wa.me/03206288238" target="_blank">Contact Us</a>
       </div>
 
       <div class="socials">
@@ -187,7 +194,7 @@
       <p>© 2025 Rank Hub. All Rights Reserved.</p>
     </div>
   </footer>
-
+  
   <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
@@ -206,5 +213,3 @@
   </script>
 </body>
 </html>
-
-
