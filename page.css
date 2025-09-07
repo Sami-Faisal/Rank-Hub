@@ -40,10 +40,24 @@ body::before {
   text-decoration:none;
   backdrop-filter: blur(5px);
   transition:0.3s;
+  position: relative;
+  overflow: hidden;
 }
 .back-btn:hover { 
-  background: rgba(255,255,255,0.3); /* white glow effect */
+  background: rgba(255,255,255,0.3);
   transform:scale(1.05); 
+}
+.back-btn::after {
+  content: "";
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 60%);
+  transform: scale(0);
+  transition: transform 0.6s ease;
+}
+.back-btn:hover::after {
+  transform: scale(1);
 }
 
 .hero { 
@@ -58,7 +72,7 @@ body::before {
 .hero-left { 
   flex:1; 
   max-width:600px; 
-  text-align:left; /* tagline left */
+  text-align:left;
 }
 
 .hero-left h1 { 
@@ -76,18 +90,19 @@ body::before {
 .hero-right { 
   flex:1; 
   max-width:420px; 
-  text-align:right; /* image right */
+  text-align:right;
 }
 
 .hero-right img { 
   max-width:100%; 
   border-radius:14px; 
-  box-shadow: 0 0 20px rgba(255,255,255,0.4); /* white glow shadow */
+  box-shadow: 0 0 20px rgba(255,255,255,0.4);
   transition: transform 0.4s, box-shadow 0.4s;
+  animation: floaty 4s ease-in-out infinite;
 }
 .hero-right img:hover {
   transform: rotateY(8deg) scale(1.03);
-  box-shadow: 0 15px 30px rgba(255,255,255,0.6); /* pure white 3D hover glow */
+  box-shadow: 0 15px 30px rgba(255,255,255,0.6);
 }
 
 .section { 
@@ -104,6 +119,18 @@ body::before {
   padding:50px 30px;
   margin:40px auto;
   max-width:900px;
+  border: 1px solid rgba(255,255,255,0.15);
+  position: relative;
+}
+.section-box::before {
+  content: "";
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(255,255,255,0.5), transparent, rgba(255,255,255,0.5));
+  z-index: -1;
+  opacity: 0.3;
+  animation: glowMove 3s linear infinite;
 }
 
 .section-title.center {
@@ -116,7 +143,7 @@ body::before {
   display:block; 
   height:3px; 
   width:60px; 
-  background: rgba(255,255,255,0.8); /* white line */
+  background: rgba(255,255,255,0.8);
   margin:10px auto 0; 
   border-radius:20px; 
 }
@@ -145,13 +172,24 @@ body::before {
   border-radius:14px;
   width:260px; 
   text-align:center;
-  box-shadow:0 8px 20px rgba(255,255,255,0.2); /* white glow shadow */
+  box-shadow:0 8px 20px rgba(255,255,255,0.2);
   transition: transform 0.4s, box-shadow 0.4s;
+  border: 1px solid rgba(255,255,255,0.15);
+  position: relative;
 }
-
 .card:hover {
   transform: translateY(-10px) rotateX(5deg) scale(1.03);
-  box-shadow:0 15px 30px rgba(255,255,255,0.5); /* pure white hover */
+  box-shadow:0 15px 30px rgba(255,255,255,0.5);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(255,255,255,0.5), transparent, rgba(255,255,255,0.5));
+  z-index: -1;
+  opacity: 0.3;
+  animation: glowMove 3s linear infinite;
 }
 
 .card i { 
@@ -172,18 +210,31 @@ body::before {
 
 .cta-btn { 
   display:inline-block; 
-  background: rgba(255,255,255,0.2); /* white glow CTA */
+  background: rgba(255,255,255,0.2);
   color:#fff; 
   padding:14px 30px; 
   border-radius:10px; 
   font-weight:600; 
   text-decoration:none; 
   transition:0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
 }
-
 .cta-btn:hover { 
-  background: rgba(255,255,255,0.3); /* white glow hover */
+  background: rgba(255,255,255,0.3);
   transform: scale(1.05) rotateX(3deg);
+}
+.cta-btn::after {
+  content: "";
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 60%);
+  transform: scale(0);
+  transition: transform 0.6s ease;
+}
+.cta-btn:hover::after {
+  transform: scale(1);
 }
 
 .faq-box { 
@@ -225,8 +276,9 @@ body::before {
 }
 
 .faq-item.active .faq-answer { 
-  max-height:300px; 
+  max-height:400px; 
   padding:18px 20px; 
+  transition: max-height 0.5s ease, padding 0.3s ease;
 }
 
 .final-cta { 
@@ -235,8 +287,19 @@ body::before {
   text-align:center; 
   padding:60px 20px; 
   border-radius:14px; 
+  border: 1px solid rgba(255,255,255,0.15);
+  position: relative;
 }
-
+.final-cta::before {
+  content: "";
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(255,255,255,0.5), transparent, rgba(255,255,255,0.5));
+  z-index: -1;
+  opacity: 0.3;
+  animation: glowMove 3s linear infinite;
+}
 .final-cta h2, .final-cta p { 
   color:#fff; 
   text-align:center;
@@ -258,4 +321,30 @@ body::before {
   .hero-left p { font-size:16px; }
   .card { width:90%; padding:20px; }
   .cta-btn { padding:12px 25px; font-size:16px; }
+}
+
+/* === EXTRA ANIMATIONS === */
+
+/* Fade in + slide up */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating hero image */
+@keyframes floaty {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Glow border animation */
+@keyframes glowMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
