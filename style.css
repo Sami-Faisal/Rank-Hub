@@ -5,7 +5,7 @@
   --font-main: 'Poppins', sans-serif;
   --white: #ffffff;
   --bg-dark: #0f1115;
-  --white: #ffffff;
+  --accent: #00ffe0;
   --glass-bg: rgba(255, 255, 255, 0.08);
   --glass-border: rgba(255, 255, 255, 0.25);
   --alt-glass-bg: rgba(255, 255, 255, 0.04);
@@ -426,4 +426,5 @@ html {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 
