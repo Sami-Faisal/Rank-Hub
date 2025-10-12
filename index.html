@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rank Hub</title>
+  <title>Rank Hub | Ready to Rank Your Site</title>
 
   <!-- SEO Meta -->
   <meta name="description" content="Rank Hub - SEO & Guest Posting services by Sami Faisal. Grow your traffic, rank higher, and dominate your niche.">
-  <meta name="keywords" content="SEO, Guest Posting, Rank Hub, Sami Faisal, Content Writing, Backlinks, Link Building, web development">
+  <meta name="keywords" content="SEO, Guest Posting, Rank Hub, Sami Faisal, Content Writing, Backlinks, Link Building">
   <meta name="author" content="Sami Faisal">
   <meta name="robots" content="index, follow">
   <meta name="google-site-verification" content="lh2XhyZneeYOc6mMgFAu7201OcT-GEcqxfCIf7kHq0E" />
 
-  <!-- OG Tags (Social Share) -->
-  <meta property="og:title" content="Rank Hub">
+  <!-- OG Tags -->
+  <meta property="og:title" content="Rank Hub | Ready to Rank Your Site">
   <meta property="og:description" content="Grow your traffic and rank higher with Rank Hub SEO and guest posting services.">
   <meta property="og:image" content="https://sami-faisal.github.io/Rank-Hub/logo.png">
   <meta property="og:url" content="https://sami-faisal.github.io/Rank-Hub/">
@@ -21,65 +21,17 @@
 
   <!-- Favicon -->
   <link rel="icon" href="logo.png" type="image/png">
-  <link rel="shortcut icon" href="logo.png" type="image/png">
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Schema: Person -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Sami Faisal",
-    "url": "https://sami-faisal.github.io/Rank-Hub/",
-    "image": "https://sami-faisal.github.io/Rank-Hub/pic.png",
-    "jobTitle": "Professional SEO & Guest Posting Expert, Web Developer, Graphic Designer",
-    "sameAs": [
-      "https://www.linkedin.com/in/sami-faisal-285694367",
-      "https://www.instagram.com/samifaisal191",
-      "https://www.facebook.com/profile.php?id=61575728133836"
-    ],
-    "email": "mailto:ziddixhk191@gmail.com",
-    "telephone": "+923206288238"
-  }
-  </script>
-
-  <!-- Schema: Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Rank Hub",
-    "url": "https://sami-faisal.github.io/Rank-Hub/",
-    "logo": "https://sami-faisal.github.io/Rank-Hub/logo.png",
-    "sameAs": [
-      "https://www.linkedin.com/in/sami-faisal-285694367",
-      "https://www.instagram.com/samifaisal191",
-      "https://www.facebook.com/profile.php?id=61575728133836"
-    ]
-  }
-  </script>
-
-  <!-- Block Right-click & Inspect -->
-  <script>
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.addEventListener('keydown', e => {
-      if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I") || (e.ctrlKey && e.key === "U")) {
-        e.preventDefault();
-      }
-    });
-  </script>
-
 </head>
+
 <body>
 
-  <div class="bg-overlay"></div>
-
-  <!-- Social Icons -->
-  <div class="social-icons fade-in" style="animation-delay: 0.3s;">
+  <!-- Fixed Left Social Icons -->
+  <div class="side-socials">
     <a href="https://wa.me/923206288238" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <a href="https://www.fiverr.com/users/samifaisal191" target="_blank"><i class="fas fa-briefcase"></i></a>
     <a href="https://www.instagram.com/samifaisal191" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -88,54 +40,75 @@
     <a href="https://x.com/SamiFaisal191" target="_blank"><i class="fab fa-twitter"></i></a>
   </div>
 
-  <!-- Header -->
-  <header>
-    <img src="logo.png" alt="Rank Hub Logo" class="logo fade-in" style="animation-delay: 0.4s;" />
-    <div class="left fade-in" style="animation-delay: 0.5s;">
-      <h1>Sami Faisal</h1>
-      <p class="tagline">Ready to rank your site with Rank Hub — where your growth means more traffic, more money, and results so good... even your competitors will wish they hired me first.</p>
+  <!-- Background -->
+  <div class="bg-overlay"></div>
+
+  <!-- NAVBAR -->
+  <header class="main-nav">
+    <div class="brand">
+      <a href="index" class="logo-link">
+        <img src="logo.png" class="logo" alt="Rank Hub Logo">
+      </a>
+      <span class="brand-name">Rank Hub</span>
     </div>
-    <div class="right fade-in" style="animation-delay: 0.6s;">
-      <img src="pic.png" alt="Sami Faisal - SEO Expert" class="profile-pic"/>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+
+    <ul id="nav-links">
+       <li><a href="Home" class="active">Home</a></li>
+      <li><a href="Services">Services</a></li>
+      <li><a href="About">About</a></li>
+      <li><a href="Blog">Blog</a></li>
+      <li><a href="Contact">Contact</a></li>
+    </ul>
   </header>
 
-  <!-- Nav -->
-  <nav class="main-nav fade-in" style="animation-delay: 0.7s;">
-    <a href="Home" class="active">Home</a>
-    <a href="Services">Services</a>
-    <a href="About">About</a>
-    <a href="Blog">Blog</a>
-    <a href="Contact">Contact</a>
-  </nav>
+  <!-- HERO SECTION -->
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Sami Faisal</h1>
+        <p class="tagline">Ready to Rank Your Site with Rank Hub</p>
+        <p class="tag-desc">Where your growth means more traffic, more money, and results so good — even your competitors will wish they hired me first.</p>
+        <a href="services.html" class="explore-btn">Explore My Services</a>
+      </div>
+      <div class="hero-image">
+        <img src="pic.png" alt="Sami Faisal - SEO Expert">
+      </div>
+    </div>
+  </section>
 
-  <!-- About Me -->
-  <section id="about-me" class="fade-in" style="animation-delay: 0.8s;">
+  <!-- ABOUT ME SECTION -->
+  <section id="about" class="content-section">
     <h2>About Me</h2>
-    <p>I’m Sami Faisal — a professional SEO & guest posting expert, web developer, graphic designer, and 14+ other digital services provider. I help brands rank higher, grow faster, and win smarter.</p>
+    <p>I’m <strong>Sami Faisal</strong> — a professional SEO & guest posting expert, web developer, graphic designer, and 14+ other digital services provider. I help brands rank higher, grow faster, and win smarter.</p>
+
     <div class="skills-boxes">
       <div class="skill-box">Guest Posting</div>
       <div class="skill-box">Content Writing</div>
       <div class="skill-box">Tool Reselling</div>
       <div class="skill-box">Canva Design</div>
     </div>
-    <a href="Services" class="btn-explore">Explore My Services</a>
   </section>
 
-  <!-- About Rank Hub -->
-  <section class="alt-bg fade-in" id="about-rankhub" style="animation-delay: 0.9s;">
+  <!-- ABOUT RANK HUB SECTION -->
+  <section id="rankhub" class="content-section alt-bg">
     <h2>About Rank Hub</h2>
-    <p>Rank Hub is your shortcut to traffic, trust, and top Google rankings. Built for smart brands that want to grow fast without wasting time.</p>
+    <p><strong>Rank Hub</strong> is your shortcut to traffic, trust, and top Google rankings. Built for smart brands that want to grow fast without wasting time.</p>
   </section>
 
-  <!-- Purpose -->
-  <section id="purpose" class="fade-in" style="animation-delay: 1s;">
+  <!-- HOW THIS SITE HELPS SECTION -->
+  <section id="helps" class="content-section">
     <h2>How This Site Helps You</h2>
     <p>Rank Hub is made for brands that want to win Google rankings, attract traffic, and grow fast with SEO & guest posting. It's your shortcut to digital growth.</p>
   </section>
 
-  <!-- Footer -->
-  <footer>
+  <!-- FOOTER -->
+  <footer id="contact" class="footer">
     <div class="footer-left">
       <h3>Reach Us</h3>
       <p>Contact Rank Hub for inquiries, collaborations, or support. We help your digital business grow effectively.</p>
@@ -145,10 +118,30 @@
         <a href="https://wa.me/03206288238" target="_blank">Contact Us</a>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <p>© 2025 Rank Hub. Built by Sami Faisal</p>
+      © 2025 Rank Hub | Built by Sami Faisal
     </div>
   </footer>
+
+  <!-- JS for Hamburger Menu -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+      }
+    });
+  </script>
 
 </body>
 </html>
