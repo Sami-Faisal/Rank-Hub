@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>web development | Rank Hub</title>
+  <link rel="stylesheet" href="page.css" />
+  <link rel="icon" href="logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a2d9d5f79e.js" crossorigin="anonymous"></script>
+  <meta name="description" content="Professional web development — fast, responsive, and built to convert. Custom sites, e-commerce, performance optimization, and long-term support.">
+</head>
+<body>
+
+  <div class="bg-overlay"></div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <a href="Services" class="back-btn zoom-btn"><i class="fas fa-arrow-left"></i> Back</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Build Fast. Sell More. Scale Confidently.</h1>
+      <p>I build clean, high-performance websites and web apps that turn visitors into customers. From landing pages to full e-commerce stores — responsive, secure, and optimized for growth.</p>
+      <a href="Contact" class="cta-btn zoom-btn">Start Your Project</a>
+    </div>
+    <div class="hero-right">
+      <img src="web.png" alt="Web Development" />
+    </div>
+  </section>
+
+  <!-- Sections -->
+  <section class="section section-box">
+    <h2 class="section-title center">Why You Need Professional Web Development</h2>
+    <p class="power">A mediocre website loses customers. A great website converts them. Professional web development ensures fast load times, mobile-ready layouts, and UX that guides visitors to take action — not bounce away.</p>
+  </section>
+
+  <section class="section section-box">
+    <h2 class="section-title center">What I Offer</h2>
+    <p class="power">Custom websites, progressive web apps, e-commerce stores, CMS integrations, API work, and performance optimization. I deliver production-ready code, secure deployments, and documentation so you can scale without headaches.</p>
+  </section>
+
+  <section class="section section-box">
+    <h2 class="section-title center">Why My Development Works</h2>
+    <p class="power">I combine modern tech with proven UX patterns: fast frontends, reliable backends, accessible markup, and SEO-friendly structure. I focus on measurable outcomes — faster pages, higher conversions, and easier maintenance.</p>
+  </section>
+
+  <section class="section section-box">
+    <h2 class="section-title center">Your Results</h2>
+    <p class="power">A site that loads quickly, ranks better, converts visitors into customers, and scales as your business grows. Expect fewer bugs, faster edits, and a site you actually enjoy owning.</p>
+  </section>
+
+  <!-- What You Get -->
+  <section class="section">
+    <h2 class="section-title center">Here’s What You Actually Get</h2>
+    <div class="cards">
+      <div class="card"><i class="fas fa-gem"></i><p><strong>Responsive, Pixel-Perfect UI</strong><br>Designs that look great on any device and match your brand voice.</p></div>
+      <div class="card"><i class="fas fa-gem"></i><p><strong>Blazing Performance</strong><br>Optimized assets, lazy-loading, and caching for faster load times and better SEO.</p></div>
+      <div class="card"><i class="fas fa-gem"></i><p><strong>Secure & Scalable Backend</strong><br>Stable server-side code, database setup, and APIs built for growth and reliability.</p></div>
+      <div class="card"><i class="fas fa-gem"></i><p><strong>Deployment & Maintenance</strong><br>Hassle-free deployment, CI/CD setup, and optional ongoing support and updates.</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <h2 class="section-title center">Frequently Asked Questions</h2>
+    <div class="faq-box">
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">How long does a website take to build?</div>
+        <div class="faq-answer">Typical timeline: 1–3 weeks for a simple site, 4–8+ weeks for custom features or e-commerce. I’ll give a specific estimate after reviewing your requirements.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">Do you handle design and content?</div>
+        <div class="faq-answer">Yes — I offer design, copy guidance, and image sourcing. If you prefer, I can work with your designer or existing assets.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">What technologies do you use?</div>
+        <div class="faq-answer">Modern stacks: HTML5, CSS3, JavaScript frameworks (React/Vue as needed), Node/PHP backends, and popular CMS options (WordPress/Headless). I pick tools that fit your project goals.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">Will my site be SEO-friendly?</div>
+        <div class="faq-answer">Absolutely. I build semantic markup, fast pages, proper meta tags, and clean URLs to help search engines crawl and rank your site better.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <h2>Ready to Launch?</h2>
+    <p>Stop losing customers to slow, clunky sites. Let’s build a fast, secure, and conversion-focused web presence that works as hard as you do.</p>
+    <a href="Contact" class="cta-btn big zoom-btn">Discuss My Project</a>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const parent = q.parentElement;
+        parent.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

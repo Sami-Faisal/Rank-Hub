@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>website maintenance | Rank Hub</title>
+  <link rel="stylesheet" href="page.css" />
+  <link rel="icon" href="logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a2d9d5f79e.js" crossorigin="anonymous"></script>
+  <meta name="description" content="Website maintenance services: automated backups, security patching, uptime monitoring, performance tuning and emergency fixes to keep your site running 24/7.">
+</head>
+<body>
+
+  <div class="bg-overlay"></div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <a href="Services" class="back-btn zoom-btn"><i class="fas fa-arrow-left"></i> Back</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Keep Your Site Healthy — 24/7 Maintenance</h1>
+      <p>Don’t lose customers to downtime, slow pages, or outdated plugins. I handle backups, security, updates, performance and emergency fixes so your site stays fast, safe, and reliable.</p>
+      <a href="Contact" class="cta-btn zoom-btn">Protect My Site</a>
+    </div>
+    <div class="hero-right">
+      <img src="fix.png" alt="Website Maintenance" />
+    </div>
+  </section>
+
+  <!-- Sections -->
+  <section class="section section-box">
+    <h2 class="section-title center">Why You Need Ongoing Maintenance</h2>
+    <p class="power">Websites are living systems — they break, get slow, and become vulnerable if ignored. Regular maintenance prevents downtime, security breaches, and lost revenue by proactively fixing issues before they hurt your business.</p>
+  </section>
+
+  <section class="section section-box">
+    <h2 class="section-title center">What I Offer</h2>
+    <p class="power">Scheduled backups, plugin & core updates, security hardening, uptime monitoring, performance tweaks, content updates, and priority emergency support. Transparent logs and monthly reports so you always know what was done.</p>
+  </section>
+
+  <section class="section section-box">
+    <h2 class="section-title center">Why My Maintenance Works</h2>
+    <p class="power">I combine automated tooling with manual checks: reliable backup retention, tested update workflows in staging, proactive security scans, and real human troubleshooting when automation can't fix it. No guesswork — just reliable uptime.</p>
+  </section>
+
+  <section class="section section-box">
+    <h2 class="section-title center">Your Results</h2>
+    <p class="power">Fewer outages, faster pages, fewer security incidents, and clear monthly insights. You get peace of mind, more uptime, and a site that reliably supports your business goals.</p>
+  </section>
+
+  <!-- What You Get -->
+  <section class="section">
+    <h2 class="section-title center">Here’s What You Actually Get</h2>
+    <div class="cards">
+      <div class="card"><i class="fas fa-gem"></i><p><strong>Automated Backups & Restore</strong><br>Daily snapshots with tested restore procedures so your data is never lost.</p></div>
+      <div class="card"><i class="fas fa-gem"></i><p><strong>Security & Patch Management</strong><br>Regular security scans, plugin/core updates, and quick patching to block vulnerabilities.</p></div>
+      <div class="card"><i class="fas fa-gem"></i><p><strong>Uptime Monitoring & Alerts</strong><br>24/7 monitoring with instant alerts and fast response for any downtime incidents.</p></div>
+      <div class="card"><i class="fas fa-gem"></i><p><strong>Performance & Content Updates</strong><br>Speed optimizations, image compression, caching plus small content or layout changes on request.</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <h2 class="section-title center">Frequently Asked Questions</h2>
+    <div class="faq-box">
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">How often do you run updates and backups?</div>
+        <div class="faq-answer">Backups run daily. Core and plugin updates are applied weekly after testing in a staging environment; critical security patches are applied immediately.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">Do you offer emergency support?</div>
+        <div class="faq-answer">Yes — priority plans include emergency response. I jump on critical outages and malware cleanups to get your site live again fast.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">Will maintenance break my site?</div>
+        <div class="faq-answer">I test updates in staging before pushing live and keep rollback snapshots. This minimizes risk — if something breaks, we restore and fix quickly.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">Can you support custom platforms or e-commerce sites?</div>
+        <div class="faq-answer">Yes. I support WordPress, WooCommerce, Shopify (basic fixes), and custom stacks. I tailor backups, caching, and security to match your platform needs.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <h2>Stop Worrying About Your Website</h2>
+    <p>Let me handle the upkeep — regular backups, updates, security and fast fixes — so you can focus on growing your business.</p>
+    <a href="Contact" class="cta-btn big zoom-btn">Keep My Site Healthy</a>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const parent = q.parentElement;
+        parent.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

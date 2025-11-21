@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Sami Faisal | Full-Stack Digital & Business Services</title>
+  <meta name="description" content="Learn about Sami Faisal – offering web & software development, SEO, design services, and clothing business solutions.">
+  <meta name="keywords" content="Sami Faisal, Web Development, SEO, Graphic Design, Software, Digital Marketing, Clothing Business">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="about.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Background -->
+  <div class="bg-overlay" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <header class="main-nav">
+    <div class="brand">
+      <a href="index" class="logo-link">
+        <img src="logo.png" class="logo" alt="Sami Faisal">
+      </a>
+      <span class="brand-name">Sami Faisal</span>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul id="nav-links">
+      <li><a href="Home">Home</a></li>
+      <li><a href="Services">Services</a></li>
+      <li><a href="About" class="active">About</a></li>
+      <li><a href="Blog">Blog</a></li>
+      <li><a href="Contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Hi, I’m <span>Sami Faisal</span> — Your Digital & Business Solutions Partner</h1>
+        <p class="hero-tagline">I deliver web development, apps, software, SEO, design, marketing, and even clothing business solutions that drive real results.</p>
+        <a href="Services" class="explore-btn">Explore My Services</a>
+      </div>
+      <div class="hero-image">
+        <img src="pic.png" alt="Sami Faisal">
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content-box">
+    <h2>About Me</h2>
+    <p><strong>Sami Faisal</strong> is a full-stack digital service provider from Faisalabad, Pakistan. I specialize in web development, mobile apps, custom software, SEO, digital marketing, and graphic design, delivering fast and professional results for clients worldwide.</p>
+    <p>My approach is simple: clean work, timely delivery, and solutions that genuinely grow your business.</p>
+
+    <h2>My Services</h2>
+    <ul>
+      <li><strong>Web & Software Development:</strong> Websites, mobile apps, and custom software solutions.</li>
+      <li><strong>Graphic & Textile Design:</strong> Logos, branding kits, posters, thumbnails, and custom textile patterns.</li>
+      <li><strong>Data & Productivity Solutions:</strong> MS Word/Excel expertise, data entry, document editing, and automation solutions.</li>
+      <li><strong>Tools & Software Reselling:</strong> Adobe, Canva Pro, Grammarly, and other professional tools with support.</li>
+      <li><strong>SEO & Digital Marketing:</strong> On-page SEO, keyword research, social media campaigns, and content marketing.</li>
+    </ul>
+
+    <h2>My Clothing Business - Urban Loom</h2>
+    <p>I also run <strong>Urban Loom</strong>, a clothing business focused on quality fabrics, trendy designs, and fast delivery. Urban Loom’s website showcases my work in digital retail, combining my design, branding, and web development skills to build an online shopping experience that converts visitors into customers.</p>
+    <p>Check out the store here: <a href="https://urban-loom.github.io/urabanloom/" target="_blank">Urban Loom</a></p>
+    <p>Services for the clothing business include product photography, online catalog setup, branding, and custom e-commerce solutions.</p>
+
+    <h2>Why Work With Me</h2>
+    <p>I prioritize communication, transparency, and quality. Clients trust me to deliver solutions that work, on time, every time.</p>
+    <p>Whether you’re a small business, a global brand, or launching an online clothing store, I provide professional services that get measurable results.</p>
+    <a href="Contact" class="explore-btn">Get in Touch</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-left">
+      <h3>Contact Me</h3>
+      <p>Email: <a href="mailto:ziddixhk191@gmail.com">ziddixhk191@gmail.com</a></p>
+      <p>Phone: <a href="tel:+923206288238">+92 320 6288238</a></p>
+      <div class="footer-links">
+        <a href="https://wa.me/03206288238" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+    <div class="socials">
+       <a href="https://wa.me/923206288238" target="_blank"><i class="fab fa-whatsapp"></i></a>
+       <a href="https://www.fiverr.com/users/samifaisal191" target="_blank"><i class="fas fa-briefcase"></i></a>
+       <a href="https://www.instagram.com/samifaisal191" target="_blank"><i class="fab fa-instagram"></i></a>
+       <a href="https://www.linkedin.com/in/sami-faisal-285694367" target="_blank"><i class="fab fa-linkedin"></i></a>
+       <a href="https://www.facebook.com/profile.php?id=61575728133836" target="_blank"><i class="fab fa-facebook"></i></a>
+       <a href="https://x.com/SamiFaisal191" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Sami Faisal | Full-Stack Digital & Business Services
+    </div>
+  </footer>
+
+  <!-- JS for hamburger menu -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if(!navLinks.contains(e.target) && !hamburger.contains(e.target)){
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>

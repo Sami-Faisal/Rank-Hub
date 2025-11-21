@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rank Hub Services - Digital & AI Solutions</title>
+  <link rel="stylesheet" href="services.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+  <div class="bg-overlay"></div>
+
+  <header class="main-nav">
+    <div class="brand">
+      <a href="index" class="logo-link">
+        <img src="logo.png" class="logo" alt="Rank Hub" />
+      </a>
+      <span class="brand-name">Rank Hub</span>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+
+    <ul id="nav-links">
+      <li><a href="Home">Home</a></li>
+      <li><a href="Services" class="active">Services</a></li>
+      <li><a href="About">About</a></li>
+      <li><a href="Blog">Blog</a></li>
+      <li><a href="Contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <section class="intro">
+    <h1 class="main-tag">Complete Digital, SEO & Development Services</h1>
+    <p class="sub-tag">Everything you need: SEO, digital marketing, graphic design, content, websites, tools, management, automation, personal business software and more.</p>
+  </section>
+
+  <section class="services-grid">
+
+    <!-- Website Development -->
+    <a href="web" class="service-card">
+      <img src="web.png" class="service-img" />
+      <div class="service-content">
+        <h3>Website Development</h3>
+        <p>Business websites, portfolios, landing pages and e-commerce builds.</p>
+      </div>
+    </a>
+
+    <!-- Website Maintenance -->
+    <a href="web maintain" class="service-card">
+      <img src="fix.png" class="service-img" />
+      <div class="service-content">
+        <h3>Website Maintenance</h3>
+        <p>Speed fixes, updates, security, backups and monthly technical care.</p>
+      </div>
+    </a>
+
+    <!-- Custom Software Development -->
+    <a href="software" class="service-card">
+      <img src="software.png" class="service-img" />
+      <div class="service-content">
+        <h3>Custom Software Development</h3>
+        <p>Billing systems, finance tools, management apps and personal business software.</p>
+      </div>
+    </a>
+
+
+    <!-- Graphic Design -->
+    <a href="design" class="service-card">
+      <img src="design.png" class="service-img" />
+      <div class="service-content">
+        <h3>Graphic Design</h3>
+        <p>Branding, logo design, banners, ads, product design and social content.</p>
+      </div>
+    </a>
+
+    <!-- Textile Designing -->
+    <a href="pattern" class="service-card">
+      <img src="pattern.PNG" class="service-img" />
+      <div class="service-content">
+        <h3>Textile Designing</h3>
+        <p>Fabric patterns, print artwork and custom textile designs.</p>
+      </div>
+    </a>
+
+    <!-- Data Entry -->
+    <a href="data" class="service-card">
+      <img src="data.png" class="service-img" />
+      <div class="service-content">
+        <h3>Data Entry Services</h3>
+        <p>Fast, accurate data entry for business and personal tasks.</p>
+      </div>
+    </a>
+
+    <!-- SEO Services -->
+    <a href="seo" class="service-card">
+      <img src="seo.png" class="service-img" />
+      <div class="service-content">
+        <h3>SEO Services</h3>
+        <p>On-page, off-page, backlinks, audits and full ranking management.</p>
+      </div>
+    </a>
+
+    <!-- Guest Posting -->
+    <a href="link" class="service-card">
+      <img src="link.png" class="service-img" />
+      <div class="service-content">
+        <h3>Guest Posting</h3>
+        <p>High-authority placement for traffic and authority growth.</p>
+      </div>
+    </a>
+
+    <!-- Digital Marketing -->
+    <a href="marketing" class="service-card">
+      <img src="marketing.png" class="service-img" />
+      <div class="service-content">
+        <h3>Digital Marketing</h3>
+        <p>Brand growth, ads, social media marketing and lead generation.</p>
+      </div>
+    </a>
+
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <h3>Reach Us</h3>
+        <p>Email: <a href="mailto:ziddixhk191@gmail.com">ziddixhk191@gmail.com</a></p>
+        <p>Phone: <a href="tel:+923206288238">+92 320 6288238</a></p>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://wa.me/923206288238" target="_blank">Contact Us</a>
+      </div>
+
+      <div class="socials">
+        <a href="https://wa.me/923206288238" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.fiverr.com/users/samifaisal191" target="_blank"><i class="fas fa-briefcase"></i></a>
+        <a href="https://www.instagram.com/samifaisal191" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/sami-faisal-285694367" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61575728133836" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://x.com/SamiFaisal191" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Rank Hub. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

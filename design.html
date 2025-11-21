@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>graphic design | Rank Hub</title>
+  <link rel="stylesheet" href="page.css" />
+  <link rel="icon" href="logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a2d9d5f79e.js" crossorigin="anonymous"></script>
+  <meta name="description" content="Graphic design services: Photoshop, Lightroom, Illustrator, branding, social visuals, banners, and polished marketing assets that convert.">
+</head>
+<body>
+
+  <div class="bg-overlay"></div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <a href="Services" class="back-btn zoom-btn"><i class="fas fa-arrow-left"></i> Back</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Design That Gets Noticed</h1>
+      <p>From brand identity to high-converting visuals — I craft clean, on-brand graphics using Photoshop, Illustrator, Lightroom and modern design principles. Ready-to-use assets for web, social, and print.</p>
+      <a href="Contact" class="cta-btn zoom-btn">Request Design</a>
+    </div>
+    <div class="hero-right">
+      <img src="design.png" alt="Graphic Design" />
+    </div>
+  </section>
+
+  <!-- Sections -->
+  <section class="section section-box">
+    <h2 class="section-title center">Why Professional Graphic Design Matters</h2>
+    <p class="power">Bad design destroys trust and kills conversions. Quality visuals build brand authority, communicate value quickly, and make your offers irresistible across channels.</p>
+  </section>
+
+  <section class="section section-box">
+    <h2 class="section-title center">What I Offer</h2>
+    <p class="power">Logo & brand identity, marketing banners, social media graphics, product mockups, photo editing in Photoshop & Lightroom, vector illustrations, and print-ready files. Fast deliveries, layered source files included.</p>
+  </section>
+
+  <section class="section section-box">
+    <h2 class="section-title center">Why My Designs Work</h2>
+    <p class="power">I combine clear messaging with visual hierarchy, color theory, and pixel-perfect execution. Every asset is optimized for its platform and goal — awareness, clicks, or conversions.</p>
+  </section>
+
+  <section class="section section-box">
+    <h2 class="section-title center">Your Results</h2>
+    <p class="power">Stronger brand recognition, higher engagement, better ad performance, and marketing assets that actually move people to act. Clean files you can reuse and scale.</p>
+  </section>
+
+  <!-- What You Get -->
+  <section class="section">
+    <h2 class="section-title center">Here’s What You Actually Get</h2>
+    <div class="cards">
+      <div class="card"><i class="fas fa-gem"></i><p><strong>Brand & Logo Design</strong><br>Memorable identities, scalable logos, and brand guidelines for consistent use.</p></div>
+      <div class="card"><i class="fas fa-gem"></i><p><strong>Photo Editing & Retouching</strong><br>Pro-level Photoshop and Lightroom edits: color grading, background removal, and product polish.</p></div>
+      <div class="card"><i class="fas fa-gem"></i><p><strong>Social & Ad Creatives</strong><br>High-performing banners and social posts tailored to platform specs and conversion goals.</p></div>
+      <div class="card"><i class="fas fa-gem"></i><p><strong>Vector Illustrations & Icons</strong><br>Clean, scalable artwork in Illustrator for UI elements, infographics, and print.</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <h2 class="section-title center">Frequently Asked Questions</h2>
+    <div class="faq-box">
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">Do you provide source files?</div>
+        <div class="faq-answer">Yes. PSD, AI, EPS, and layered files are included by default so you can edit or hand them off later.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">Can you match my existing brand style?</div>
+        <div class="faq-answer">Absolutely. I follow your brand colors, fonts, and tone. If you don't have guidelines, I can create a simple brand pack.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">What if I need revisions?</div>
+        <div class="faq-answer">Revisions are part of the process. Each package includes a set number of revisions; additional tweaks are available at a small fee.</div>
+      </div>
+      <div class="faq-item zoom-btn">
+        <div class="faq-question">How long until I get my designs?</div>
+        <div class="faq-answer">Typical turnaround: 24–72 hours for small assets, 3–10 days for branding or larger projects. Rush options available for urgent needs.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <h2>Want Clean, High-Converting Visuals?</h2>
+    <p>Send your brief or samples — I’ll deliver polished designs that fit your goals and brand voice. Fast, professional, no bullshit.</p>
+    <a href="Contact" class="cta-btn big zoom-btn">Get a Quote</a>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const parent = q.parentElement;
+        parent.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
